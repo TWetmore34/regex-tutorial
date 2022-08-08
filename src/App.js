@@ -10,7 +10,7 @@ function App() {
     {
       topic: 'msg',
       text: 'regexes r scary!!',
-      code: [':0', '/w+/ vibes']
+      code: "https://codepen.io/twetmore34/embed/dymKVGN?default-tab=js%2Cresult&editable=true&theme-id=dark"
     },
     {
       topic: 'msg',
@@ -63,9 +63,8 @@ function App() {
   return (
     <div >
       <Header />
-
+      <Tutorial setMsg={messages[index]}/> 
       <Button color='red' text='Prev' index={indexDown}/>
-        <Tutorial setMsg={messages[index]}/> 
       <Button color='coral' text='next' index={indexUp} />
     </div>
   );

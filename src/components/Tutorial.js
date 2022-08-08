@@ -3,16 +3,15 @@ const Tutorial = ({ setMsg }) => {
     <div>
         <h3>{setMsg.topic}</h3>
         <p>{setMsg.text}</p>
-        <div className="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="dymKVGN" data-editable="true" data-user="twetmore34"  data-prefill='{"tags":[],"scripts":[],"stylesheets":[]}'>
-  <pre data-lang="html">
-    <span id="result"></span>
-    </pre>
-  <pre data-lang="js">let regex = new RegExp('hello')
-
-let str = 'hello world'
-
-document.getElementById('result').innerHTML = regex.test(str)</pre></div>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        <iframe height="400.82421875" style={{width: "100%"}} 
+        scrolling="no" 
+        title="Untitled" 
+        src={ setMsg.code }
+        frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/twetmore34/pen/dymKVGN">
+  Untitled</a> by TWetmore34 (<a href="https://codepen.io/twetmore34">@twetmore34</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
     </div>
   )
 }
