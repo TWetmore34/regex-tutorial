@@ -29,3 +29,20 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.subheader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24;
+    margin: 5px;
+}
+
+.msg-text {
+    text-align: center;
+    line-height: 25px;
+}
+
+.text-area {
+    width: 50%;
+    margin: 0 auto;
+}

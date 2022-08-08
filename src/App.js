@@ -8,14 +8,14 @@ function App() {
   // grab index i where i is moved around by the buttons
   const [messages, setMessages] = useState([
     {
-      topic: 'msg',
-      text: 'regexes r scary!!',
-      code: "https://codepen.io/twetmore34/embed/dymKVGN?default-tab=js%2Cresult&editable=true&theme-id=dark"
+      topic: 'What are Regexes?',
+      text: 'Regexes are nothing but patterns we can create to search through strings and arrays. JavaScript includes several built in methods for either option. For the sake of this tutorial, we will start by looking at string methods!',
+      code: ""
     },
     {
-      topic: 'msg',
-      text: 'hello!',
-      code: [':0', '/w+/ vibes']
+      topic: "The .find method",
+      text: "The first method we'll cover today is regex.find(str)! If you observe the code editor below, you may notice a very simple regex. The syntax for it starts out as simple as two forward slashes surrounding the pattern you'd like to find. The find method takes that pattern and returns a boolean value based on whether it exists in the string or not. In this case, /hello/ is in the string 'hello world' so we get a return value of true!",
+      code: 'https://codepen.io/twetmore34/embed/dymKVGN?default-tab=js%2Cresult&editable=true&theme-id=dark'
     },
     {
       topic: 'msg',
@@ -65,7 +65,7 @@ function App() {
       <Header />
       <Tutorial setMsg={messages[index]}/> 
       <Button color='red' text='Prev' index={indexDown}/>
-      <Button color='coral' text='next' index={indexUp} />
+      <Button color='coral' text='Next' index={indexUp} />
     </div>
   );
 }
