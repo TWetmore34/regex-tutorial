@@ -18,9 +18,9 @@ function App() {
       code: 'https://codepen.io/twetmore34/embed/dymKVGN?default-tab=js%2Cresult&editable=true&theme-id=dark'
     },
     {
-      topic: 'msg',
-      text: 'asdfasdf',
-      code: [':0', '/w+/ vibes']
+      topic: 'The .match method',
+      text: 'The next method to address is the match method. Much like .find, match will search through a string with the pattern provided by your regex. The key difference is what the method returns. Instead of a boolean, we see the actual content that matched the pattern (more specifically, it is returned in an array - keep this in mind when accessing values grabbed with the method). so, instead of the regex /hello/ called on hello world returning true, it would instead return hello. This gives us a powerful tool for problems involving strings as we can quickly isolate the data we want to work with, rahter than just knowing its there!',
+      code: 'https://codepen.io/twetmore34/embed/VwXBpgv?default-tab=js%2Cresult&editable=true&theme-id=dark'
     }]);
 
      // use me for msg
@@ -28,20 +28,15 @@ function App() {
 
         // increase index
         const indexUp = () => {
-          if(index >= messages.length - 1) {
-            index = messages.length - 1
-          } else {
+          if(index < messages.length - 1) {
             index++
             return setIndex(index)
           }
-          console.log(index)
         }
     
         // decrease index
         const indexDown = () => {
-          if (index - 1 <= -1){
-            index = 0
-          } else {
+          if (index > 0){
             index--
             return setIndex(index)
           }
@@ -52,9 +47,7 @@ function App() {
     // When that CHANGE OCCURS, then does it run the logic
     useEffect(() => {
       // logic you want to execute
-      console.log(index)
       setIndex(index)
-      console.log(index)
     }, 
     // the condition that it observes to change
     [index]);
@@ -63,7 +56,7 @@ function App() {
   return (
     <div >
       <Header />
-      <Tutorial setMsg={messages[index]}/> 
+      <Tutorial setMsg={messages[index]} index={index}/> 
       <Button color='red' text='Prev' index={indexDown}/>
       <Button color='coral' text='Next' index={indexUp} />
     </div>
