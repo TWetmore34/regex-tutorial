@@ -14,8 +14,8 @@ function App() {
       code: ""
     },
     {
-      topic: "The .find method",
-      text: "The first method we'll cover today is regex.find(str)! If you observe the code editor below, you may notice a very simple regex. The syntax for it starts out as simple as two forward slashes surrounding the pattern you'd like to find. The find method takes that pattern and returns a boolean value based on whether it exists in the string or not. In this case, /hello/ is in the string 'hello world' so we get a return value of true!",
+      topic: "The .test method",
+      text: "The first method we'll cover today is regex.test(str)! If you observe the code editor below, you may notice a very simple regex. The syntax for it starts out as simple as two forward slashes surrounding the pattern you'd like to find. The find method takes that pattern and returns a boolean value based on whether it exists in the string or not. In this case, /hello/ is in the string 'hello world,' so we get a return value of true!",
       code: 'https://codepen.io/twetmore34/embed/dymKVGN?default-tab=js%2Cresult&editable=true&theme-id=dark'
     },
     {
@@ -43,6 +43,11 @@ function App() {
           }
         }
 
+        // set index for navbar
+        const changeIndex = (e) => {
+              setIndex(e.target.id)
+            }
+
     // ComponentDidMount
     // It OBSERVES for a condition to change
     // When that CHANGE OCCURS, then does it run the logic
@@ -62,8 +67,8 @@ function App() {
 
   return (
     <div >
-      {navBarOn ? <Navbar navbar={navbar}/> : ''}
-      <Header navbar={navbar} />
+      {navBarOn ? <Navbar changeIndex={changeIndex} navbar={navbar}/> : ''}
+      <Header navbar={navbar} setIndex={setIndex} />
       <Tutorial setMsg={messages[index]} index={index}/> 
       <Button color='red' text='Prev' index={indexDown}/>
       <Button color='coral' text='Next' index={indexUp} />

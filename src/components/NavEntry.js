@@ -1,14 +1,8 @@
-const NavEntry = ({ title }) => {
-
-     // navbar entry render
-     const navEntryHandler = (e) => {
-        console.log(e.target.classList.add())
-      }
-
+const NavEntry = ({ title, id, changeIndex }) => {
   return (
-    <li onClick={navEntryHandler} style={{cursor: 'pointer'}} className="nav-entry">
+    <div onClick={changeIndex} id={id} style={{}} className="nav-entry">
         {title}
-    </li>
+    </div>
   )
 }
 
