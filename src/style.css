@@ -47,3 +47,21 @@
     width: 50%;
     margin: 0 auto;
 }
+
+.navbar {
+    width: 10%;
+    height: 100vw;
+    background-color: lightgrey;
+    line-height: 25px;
+    position: fixed;
+    padding: 10px;
+    animation: navGrow 500ms linear;
+}
+
+@keyframes navGrow {
+    0% { width: 0%; }
+    30% { width: 3%; }
+    50% { width: 5%; }
+    70% { width: 7%; }
+    100% { width: 10%; }
+}

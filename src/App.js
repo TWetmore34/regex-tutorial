@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Button from './components/Button';
+import Navbar from "./components/Navbar"
 import { useEffect, useState } from 'react'
 import './style.css'
 import Tutorial from './components/Tutorial';
@@ -52,10 +53,18 @@ function App() {
     // the condition that it observes to change
     [index]);
 
+    let [navBarOn, setNavBarOn] = useState(false)
+
+    // navbar render
+      const navbar = () => {
+        setNavBarOn(!navBarOn)
+        console.log(navBarOn)
+      }
 
   return (
     <div >
-      <Header />
+      {navBarOn ? <Navbar navbar={navbar}/> : ''}
+      <Header navbar={navbar} />
       <Tutorial setMsg={messages[index]} index={index}/> 
       <Button color='red' text='Prev' index={indexDown}/>
       <Button color='coral' text='Next' index={indexUp} />
