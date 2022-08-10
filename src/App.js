@@ -58,7 +58,6 @@ function App() {
     // navbar render
       const navbar = () => {
         setNavBarOn(!navBarOn)
-        console.log(navBarOn)
       }
 
   return (

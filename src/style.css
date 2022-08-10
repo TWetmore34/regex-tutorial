@@ -48,6 +48,10 @@
     margin: 0 auto;
 }
 
+.check {
+    color: red;
+}
+
 .navbar {
     width: 10%;
     height: 100vw;
@@ -55,7 +59,14 @@
     line-height: 25px;
     position: fixed;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     animation: navGrow 500ms linear;
+}
+
+.navbar li:nth-child(even) {
+    background-color: rgb(172, 172, 172);
 }
 
 @keyframes navGrow {
