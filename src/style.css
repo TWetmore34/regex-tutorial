@@ -84,3 +84,18 @@
     70% { width: 12%; }
     100% { width: 15%; }
 }
+
+.form-container {
+    width: 30vw;
+    margin: 15px auto;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.form {
+    margin: 10px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+}
+

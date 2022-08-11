@@ -1,7 +1,8 @@
-import { FaTimes } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import NavEntry from './NavEntry'
 import { useState } from 'react'
 import { IoIosArrowDropdown } from 'react-icons/io'
+
 
 const Navbar = ({ changeIndex, lessons }) => {
 
@@ -15,7 +16,7 @@ const Navbar = ({ changeIndex, lessons }) => {
       // renders nav entries based on lessons
       const lessonList = () => {
         return lessons.map(lesson => (
-          <NavEntry id={lesson.id} key={lesson.id} changeIndex={changeIndex} title={lesson.topic} /> 
+          <NavEntry className='navbar-entry' id={lesson.id} key={lesson.id} changeIndex={changeIndex} title={lesson.topic} /> 
         ))
       }
 
@@ -34,7 +35,7 @@ const Navbar = ({ changeIndex, lessons }) => {
             ) :
             null}
             <li>
-            Regex Maker (W.i.P)
+            <Link style={{color: 'black'}} to='/maker'>Regex Maker (W.i.P)</Link>
             </li>
             
         </ul>

@@ -84,7 +84,13 @@ function App() {
          }/>
         <Route
         path="/maker"
-        element={<RegexForm />}
+        element={
+          <>
+          {navBarOn ? <Navbar lessons={messages} changeIndex={changeIndex} navbar={navbar}/> : ''}
+          <Header navbar={navbar} setIndex={setIndex} />
+          <RegexForm />
+          </>
+      }
         />
       </Routes>
     </div>
