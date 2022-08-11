@@ -1,7 +1,9 @@
 import Header from './components/Header'
 import Button from './components/Button';
 import Navbar from "./components/Navbar"
+import RegexForm from './components/RegexForm';
 import { useEffect, useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './style.css'
 import Tutorial from './components/Tutorial';
 
@@ -52,8 +54,6 @@ function App() {
             }
 
     // ComponentDidMount
-    // It OBSERVES for a condition to change
-    // When that CHANGE OCCURS, then does it run the logic
     useEffect(() => {
       // logic you want to execute
       setIndex(index)
@@ -69,13 +69,27 @@ function App() {
       }
 
   return (
+    <BrowserRouter>
     <div >
-      {navBarOn ? <Navbar lessons={messages} changeIndex={changeIndex} navbar={navbar}/> : ''}
-      <Header navbar={navbar} setIndex={setIndex} />
-      <Tutorial setMsg={messages[index]} index={index}/> 
-      <Button color='red' text='Prev' index={indexDown}/>
-      <Button color='coral' text='Next' index={indexUp} />
+   
+      <Routes>
+        <Route path='/' element={ 
+           <>
+           {navBarOn ? <Navbar lessons={messages} changeIndex={changeIndex} navbar={navbar}/> : ''}
+           <Header navbar={navbar} setIndex={setIndex} />
+           <Tutorial setMsg={messages[index]} index={index}/> 
+           <Button color='red' text='Prev' index={indexDown}/>
+           <Button color='coral' text='Next' index={indexUp} />
+         </>
+         }/>
+        <Route
+        path="/maker"
+        element={<RegexForm />}
+        />
+      </Routes>
     </div>
+
+    </BrowserRouter>
   );
 }
 
