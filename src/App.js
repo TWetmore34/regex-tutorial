@@ -48,7 +48,6 @@ function App() {
 
         // set index for navbar
         const changeIndex = (e) => {
-              console.log(e.target.id)
               setIndex(e.target.id)
             }
 
