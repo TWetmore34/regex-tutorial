@@ -3,18 +3,24 @@ import NavEntry from './NavEntry'
 import { useState } from 'react'
 import { IoIosArrowDropdown } from 'react-icons/io'
 
-const Navbar = ({ navbar, changeIndex }) => {
+const Navbar = ({ changeIndex, lessons }) => {
 
-      // 
+      // switches nav entry display
       let [regexTutorialDisplay, setRegexTutorialDisplay] = useState(false)
        // navbar entry render
        const navEntryHandler = () => {
         setRegexTutorialDisplay(!regexTutorialDisplay)
       }
 
+      // renders nav entries based on lessons
+      const lessonList = () => {
+        return lessons.map(lesson => (
+          <NavEntry id={lesson.id} key={lesson.id} changeIndex={changeIndex} title={lesson.topic} /> 
+        ))
+      }
+
   return (
     <nav style={{cursor: 'pointer'}} className="navbar">
-        <FaTimes onClick={navbar} style={{color: 'red', cursor: 'pointer'}} />
         <ul style={{listStyle: 'none'}}>
           <li onClick={navEntryHandler}>
             Regex Tutorial
@@ -23,9 +29,7 @@ const Navbar = ({ navbar, changeIndex }) => {
           {regexTutorialDisplay ? 
             (
               <li className="nav-entry">
-            <NavEntry changeIndex={changeIndex} id={0} title={'Home'} />
-            <NavEntry changeIndex={changeIndex} id={1} title={'.test'} />
-            <NavEntry changeIndex={changeIndex} id={2} title={'.match'} />
+                {lessonList()}
              </li>
             ) :
             null}

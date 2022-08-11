@@ -1,6 +1,6 @@
 const NavEntry = ({ title, id, changeIndex }) => {
   return (
-    <div onClick={changeIndex} id={id}>
+    <div id={id} onClick={changeIndex}>
         {title}
     </div>
   )
