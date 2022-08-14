@@ -68,6 +68,18 @@ function App() {
         setNavBarOn(!navBarOn)
       }
 
+      // regex form submit
+      const formHandler = (e) => {
+        e.preventDefault()
+        const select = document.querySelectorAll('select')
+        const checkBox = document.querySelector('input')
+        console.log(select)
+        for(let i=0;i<select.length;i++){
+          console.log(select[i].value)
+        }
+        console.log(checkBox.checked)
+      }
+
   return (
     <BrowserRouter>
     <div >
@@ -88,7 +100,7 @@ function App() {
           <>
           {navBarOn ? <Navbar lessons={messages} changeIndex={changeIndex} navbar={navbar}/> : ''}
           <Header navbar={navbar} setIndex={setIndex} />
-          <RegexForm />
+          <RegexForm formHandler={formHandler} />
           </>
       }
         />
