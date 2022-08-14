@@ -73,11 +73,25 @@ function App() {
         e.preventDefault()
         const select = document.querySelectorAll('select')
         const checkBox = document.querySelector('input')
+        let regex = '/['
         console.log(select)
-        for(let i=0;i<select.length;i++){
-          console.log(select[i].value)
+        for(let i=0;i<select.length - 1;i++){
+          console.log(select[i].value, select[i+1].value)
+          // currently, the last letter gets cut off by this check bc if always returns undefined
+          if(select[i].value !== select[i+1].value) {
+            regex += select[i].value
+            if(i % 2 === 0){
+              regex += '-'
+            }
+          } else {
+            i++
+          }
         }
-        console.log(checkBox.checked)
+        // for now, soliving it by just adding the last value manually
+        regex += select[select.length-1].value
+        if(checkBox.checked) regex += '!@#$%^&*()_'
+        regex += ']/'
+        return regex
       }
 
   return (
