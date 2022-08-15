@@ -7,7 +7,7 @@ const RegexForm = ({ formHandler }) => {
       result.push(i)
     }
     return result.map(num => (
-    <Select title={num} />
+    <Select key={num} title={num} />
     ))
   }
 
@@ -18,7 +18,7 @@ const RegexForm = ({ formHandler }) => {
     for(let i=0;i<26;i++){
       result.push(String.fromCharCode(base + i))
     }
-    return result.map(letter => <Select title={letter} />)
+    return result.map(letter => <Select key={letter} title={letter} />)
   }
 
   const createSelectAlphaUpper = () => {
@@ -27,7 +27,7 @@ const RegexForm = ({ formHandler }) => {
     for(let i=0;i<26;i++){
       result.push(String.fromCharCode(base + i))
     }
-    return result.map(letter => <Select title={letter} />)
+    return result.map(letter => <Select key={letter} title={letter} />)
   }
   
   return (
@@ -64,7 +64,7 @@ const RegexForm = ({ formHandler }) => {
       <select id={'alphaMax'} name={'alphaMax'}>
         {createSelectAlphaUpper()}
       </select>
-
+      
       {/* spec chars */}
       <br></br>
       <label htmlFor={'alphaMin'}>Include special characters?</label>

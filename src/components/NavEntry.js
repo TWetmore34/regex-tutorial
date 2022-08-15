@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
+
 const NavEntry = ({ title, id, changeIndex }) => {
   return (
-    <div id={id} onClick={changeIndex}>
+    <Link style={{color: 'black', display: 'block'}} to='/' id={id} onClick={changeIndex}>
         {title}
-    </div>
+    </Link>
   )
 }
 
