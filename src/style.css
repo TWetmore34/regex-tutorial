@@ -99,3 +99,7 @@
     font-size: 18px;
 }
 
+a, Link {
+    color: black;
+    display: block;
+}

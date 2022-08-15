@@ -35,7 +35,7 @@ const Navbar = ({ changeIndex, lessons }) => {
             ) :
             null}
             <li>
-            <Link style={{color: 'black'}} to='/maker'>Regex Maker (W.i.P)</Link>
+            <Link to='/maker'>Regex Maker (W.i.P)</Link>
             </li>
             
         </ul>
