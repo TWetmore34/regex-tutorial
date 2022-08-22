@@ -74,9 +74,7 @@ function App() {
         const select = document.querySelectorAll('select')
         const checkBox = document.querySelector('input')
         let regex = '/['
-        console.log(select)
         for(let i=0;i<select.length - 1;i++){
-          console.log(select[i].value, select[i+1].value)
           // currently, the last letter gets cut off by this check bc if always returns undefined
           if(select[i].value !== select[i+1].value) {
             regex += select[i].value
@@ -91,6 +89,15 @@ function App() {
         regex += select[select.length-1].value
         if(checkBox.checked) regex += '!@#$%^&*()_'
         regex += ']/'
+
+        // set in local storage
+        let regexList = localStorage.getItem('regexes') ?? []
+        regexList = [...regexList]
+        regexList.push(regex)
+        regexList.push('testing')
+        console.log(regexList)
+        
+        localStorage.setItem('regexes', regexList)
         return regex
       }
 

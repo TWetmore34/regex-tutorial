@@ -1,4 +1,6 @@
 import Select from "./Select"
+import RegexDisplay from './RegexDisplay'
+
 const RegexForm = ({ formHandler }) => {
   // gen select els
   const createSelectNum = () => {
@@ -30,6 +32,13 @@ const RegexForm = ({ formHandler }) => {
     return result.map(letter => <Select key={letter} title={letter} />)
   }
   
+  function displayReggies () {
+    let regexList = localStorage.getItem('regex') ?? []
+    return regexList.map(reggie => (
+      <RegexDisplay text={reggie} />
+    ))
+}
+
   return (
     <div className="form-container">
     {/* add check for proper order on these on submit */}
@@ -72,6 +81,10 @@ const RegexForm = ({ formHandler }) => {
 
       <button className="btn">Submit</button>
     </form>
+
+    <ul>
+      {displayReggies()}
+    </ul>
     </div>
   )
 }
