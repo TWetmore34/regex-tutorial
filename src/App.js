@@ -27,7 +27,18 @@ function App() {
       text: 'The next method to address is the match method. Much like .test, .match will search through a string with the pattern provided by your regex. The key difference is what the method returns. Instead of a boolean, we see the actual content that matched the pattern (more specifically, it is returned in an array - keep this in mind when accessing values grabbed with the method). so, instead of the regex /hello/ called on hello world returning true, it would instead return hello. This gives us a powerful tool for problems involving strings as we can quickly isolate the data we want to work with, rahter than just knowing its there!',
       code: 'https://codepen.io/twetmore34/embed/VwXBpgv?default-tab=js%2Cresult&editable=true&theme-id=dark',
       id: 2
-    }]);
+    },
+    {
+      text: "Next on our list is the replace method. What makes this method fascinating is it is the first we've seen to actually mutate our data in some way. By using .replace on a string, the instance of our regex that is matched will be replaced with the mothod's second parameter.",
+      code: 'https://codepen.io/twetmore34/embed/ZExPMGw?default-tab=js%2Cresult&editable=true&theme-id=dark',
+      id: 3
+    },
+    {
+      text: "The final method we'll cover in this tutorial is .search. This method returns the index at which the regex finds a match. It's syntax is very similar to the others with string.search(regex). Try it out for yourself down below!",
+      code: "https://codepen.io/twetmore34/embed/wvmOEGp?default-tab=js%2Cresult&editable=true&theme-id=dark",
+      id: 4
+    }
+  ]);
 
      // use me for msg
     let [index, setIndex] = useState(0)
@@ -110,7 +121,7 @@ function App() {
            <>
            {navBarOn ? <Navbar lessons={messages} changeIndex={changeIndex} navbar={navbar}/> : ''}
            <Header navbar={navbar} setIndex={setIndex} />
-           <Tutorial setMsg={messages[index]} index={index}/> 
+           <Tutorial msg={messages} setMsg={messages[index]} index={index}/> 
            <Button color='red' text='Prev' index={indexDown}/>
            <Button color='coral' text='Next' index={indexUp} />
          </>

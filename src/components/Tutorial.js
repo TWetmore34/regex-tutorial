@@ -1,4 +1,4 @@
-const Tutorial = ({ setMsg, index }) => {
+const Tutorial = ({ msg, setMsg, index }) => {
   return (
     <div>
         <h3 className="subheader">{setMsg.topic}</h3>
@@ -15,7 +15,7 @@ const Tutorial = ({ setMsg, index }) => {
   Untitled</a> by TWetmore34 (<a href="https://codepen.io/twetmore34">@twetmore34</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe> : ''}
-          <h4 className="msg-text">Page {parseInt(index) + 1}/3</h4>
+          <h4 className="msg-text">Page {parseInt(index) + 1}/{msg.length}</h4>
     </div>
   )
 }
