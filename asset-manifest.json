@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/regex-tutorial/static/css/main.06a0e256.css",
-    "main.js": "/regex-tutorial/static/js/main.f8f38701.js",
-    "static/js/787.6b130e69.chunk.js": "/regex-tutorial/static/js/787.6b130e69.chunk.js",
-    "index.html": "/regex-tutorial/index.html",
-    "main.06a0e256.css.map": "/regex-tutorial/static/css/main.06a0e256.css.map",
-    "main.f8f38701.js.map": "/regex-tutorial/static/js/main.f8f38701.js.map",
-    "787.6b130e69.chunk.js.map": "/regex-tutorial/static/js/787.6b130e69.chunk.js.map"
+    "main.css": "/static/css/main.06a0e256.css",
+    "main.js": "/static/js/main.2a32c916.js",
+    "static/js/787.6b130e69.chunk.js": "/static/js/787.6b130e69.chunk.js",
+    "index.html": "/index.html",
+    "main.06a0e256.css.map": "/static/css/main.06a0e256.css.map",
+    "main.2a32c916.js.map": "/static/js/main.2a32c916.js.map",
+    "787.6b130e69.chunk.js.map": "/static/js/787.6b130e69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06a0e256.css",
-    "static/js/main.f8f38701.js"
+    "static/js/main.2a32c916.js"
   ]
 }
