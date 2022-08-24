@@ -113,7 +113,7 @@ function App() {
       }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='http://TWetmore34.github.io/'>
     <div >
    
       <Routes>
