@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/regex-tutorial/static/css/main.240829c8.css",
-    "main.js": "/regex-tutorial/static/js/main.e9bc78c9.js",
+    "main.js": "/regex-tutorial/static/js/main.d9413290.js",
     "static/js/787.6b130e69.chunk.js": "/regex-tutorial/static/js/787.6b130e69.chunk.js",
     "index.html": "/regex-tutorial/index.html",
     "main.240829c8.css.map": "/regex-tutorial/static/css/main.240829c8.css.map",
-    "main.e9bc78c9.js.map": "/regex-tutorial/static/js/main.e9bc78c9.js.map",
+    "main.d9413290.js.map": "/regex-tutorial/static/js/main.d9413290.js.map",
     "787.6b130e69.chunk.js.map": "/regex-tutorial/static/js/787.6b130e69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.240829c8.css",
-    "static/js/main.e9bc78c9.js"
+    "static/js/main.d9413290.js"
   ]
 }
