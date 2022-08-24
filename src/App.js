@@ -113,7 +113,7 @@ function App() {
       }
 
   return (
-    <BrowserRouter basename='http://TWetmore34.github.io/regex-tutorial/'>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div >
    
       <Routes>
