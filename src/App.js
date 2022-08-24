@@ -114,7 +114,6 @@ function App() {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <div >
    
       <Routes>
         <Route path='/' element={ 
@@ -137,7 +136,7 @@ function App() {
       }
         />
       </Routes>
-    </div>
+
 
     </BrowserRouter>
   );
