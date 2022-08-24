@@ -19,7 +19,7 @@
 .btn {
     display: block;
     height: 50px;
-    width: 300px;
+    width: auto;
     background-color: coral;
     color: #fff;
     border-radius: 5px;
